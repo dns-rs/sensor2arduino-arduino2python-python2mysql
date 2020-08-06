@@ -33,7 +33,7 @@ while True:
 			print "--------------------------"
 				   
 			inputData = (unixtime, jsonObj["temperature"],jsonObj["humidity"],jsonObj["brightness"])
-			x.execute("""INSERT INTO your_table_name SET datum=%s, temperature=%s, humidity=%s, feny=%s""",inputData)
+			x.execute("""INSERT INTO your_table_name SET timestamp=%s, temperature=%s, humidity=%s, brightness=%s""",inputData)
 			conn.commit()
 			print inputData
 			   
